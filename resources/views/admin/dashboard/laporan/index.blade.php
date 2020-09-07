@@ -119,10 +119,10 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
         <div class="box">
           <div class="box-header with border">
-            <h4>Cash Flow Raw</h4>
+            <h4>Buku Kecil</h4>
             <div class="box-tools pull-right">
               <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             </div>
