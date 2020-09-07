@@ -1,0 +1,380 @@
+#KTPPemohon p{ margin:10px 5px; font-size:0.9em; }
+    #log-1{ margin:0; padding:0; width:500px;}
+    #log-1 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-1 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-1 li .progress{ background:#999; width:0%; height:5px; }
+    #log-1 li p{ margin:0; line-height:18px; }
+    #log-1 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-1 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#KTPKeluarga p{ margin:10px 5px; font-size:0.9em; }
+    #log-2{ margin:0; padding:0; width:500px;}
+    #log-2 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-2 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-2 li .progress{ background:#999; width:0%; height:5px; }
+    #log-2 li p{ margin:0; line-height:18px; }
+    #log-2 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-2 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#KartuKeluarga p{ margin:10px 5px; font-size:0.9em; }
+    #log-3{ margin:0; padding:0; width:500px;}
+    #log-3 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-3 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-3 li .progress{ background:#999; width:0%; height:5px; }
+    #log-3 li p{ margin:0; line-height:18px; }
+    #log-3 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-3 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SKDomisili p{ margin:10px 5px; font-size:0.9em; }
+    #log-4{ margin:0; padding:0; width:500px;}
+    #log-4 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-4 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-4 li .progress{ background:#999; width:0%; height:5px; }
+    #log-4 li p{ margin:0; line-height:18px; }
+    #log-4 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-4 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#AktePemohon p{ margin:10px 5px; font-size:0.9em; }
+    #log-5{ margin:0; padding:0; width:500px;}
+    #log-5 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-5 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-5 li .progress{ background:#999; width:0%; height:5px; }
+    #log-5 li p{ margin:0; line-height:18px; }
+    #log-5 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-5 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+
+#SPKeluarga p{ margin:10px 5px; font-size:0.9em; }
+    #log-6{ margin:0; padding:0; width:500px;}
+    #log-6 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-6 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-6 li .progress{ background:#999; width:0%; height:5px; }
+    #log-6 li p{ margin:0; line-height:18px; }
+    #log-6 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-6 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#AkteCerai p{ margin:10px 5px; font-size:0.9em; }
+    #log-7{ margin:0; padding:0; width:500px;}
+    #log-7 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-7 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-7 li .progress{ background:#999; width:0%; height:5px; }
+    #log-7 li p{ margin:0; line-height:18px; }
+    #log-7 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-7 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratKematian p{ margin:10px 5px; font-size:0.9em; }
+    #log-8{ margin:0; padding:0; width:500px;}
+    #log-8 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-8 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-8 li .progress{ background:#999; width:0%; height:5px; }
+    #log-8 li p{ margin:0; line-height:18px; }
+    #log-8 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-8 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratKuasa p{ margin:10px 5px; font-size:0.9em; }
+    #log-9{ margin:0; padding:0; width:500px;}
+    #log-9 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-9 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-9 li .progress{ background:#999; width:0%; height:5px; }
+    #log-9 li p{ margin:0; line-height:18px; }
+    #log-9 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-9 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SKWaris p{ margin:10px 5px; font-size:0.9em; }
+    #log-10{ margin:0; padding:0; width:500px;}
+    #log-10 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-10 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-10 li .progress{ background:#999; width:0%; height:5px; }
+    #log-10 li p{ margin:0; line-height:18px; }
+    #log-10 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-10 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratPengampuan p{ margin:10px 5px; font-size:0.9em; }
+    #log-11{ margin:0; padding:0; width:500px;}
+    #log-11 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-11 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-11 li .progress{ background:#999; width:0%; height:5px; }
+    #log-11 li p{ margin:0; line-height:18px; }
+    #log-11 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-11 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#Surat p{ margin:10px 5px; font-size:0.9em; }
+    #log-12{ margin:0; padding:0; width:500px;}
+    #log-12 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-12 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-12 li .progress{ background:#999; width:0%; height:5px; }
+    #log-12 li p{ margin:0; line-height:18px; }
+    #log-12 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-12 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }  
+
+#Nominatif p{ margin:10px 5px; font-size:0.9em; }
+    #log-13{ margin:0; padding:0; width:500px;}
+    #log-13 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-13 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-13 li .progress{ background:#999; width:0%; height:5px; }
+    #log-13 li p{ margin:0; line-height:18px; }
+    #log-13 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-13 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }  
+
+#BackupDokumen p{ margin:10px 5px; font-size:0.9em; }
+    #log-14{ margin:0; padding:0; width:500px;}
+    #log-14 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-14 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-14 li .progress{ background:#999; width:0%; height:5px; }
+    #log-14 li p{ margin:0; line-height:18px; }
+    #log-14 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-14 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }  
+
+#BackupDokumen2 p{ margin:10px 5px; font-size:0.9em; }
+    #log-15{ margin:0; padding:0; width:500px;}
+    #log-15 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-15 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-15 li .progress{ background:#999; width:0%; height:5px; }
+    #log-15 li p{ margin:0; line-height:18px; }
+    #log-15 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-15 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }                                             
+
+#AlasHak p{ margin:10px 5px; font-size:0.9em; }
+    #log-16{ margin:0; padding:0; width:500px;}
+    #log-16 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-16 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-16 li .progress{ background:#999; width:0%; height:5px; }
+    #log-16 li p{ margin:0; line-height:18px; }
+    #log-16 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-16 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#Kwitansi p{ margin:10px 5px; font-size:0.9em; }
+    #log-17{ margin:0; padding:0; width:500px;}
+    #log-17 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-17 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-17 li .progress{ background:#999; width:0%; height:5px; }
+    #log-17 li p{ margin:0; line-height:18px; }
+    #log-17 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-17 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+
+#SPPT p{ margin:10px 5px; font-size:0.9em; }
+    #log-18{ margin:0; padding:0; width:500px;}
+    #log-18 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-18 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-18 li .progress{ background:#999; width:0%; height:5px; }
+    #log-18 li p{ margin:0; line-height:18px; }
+    #log-18 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-18 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+
+#STTS p{ margin:10px 5px; font-size:0.9em; }
+    #log-19{ margin:0; padding:0; width:500px;}
+    #log-19 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-19 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-19 li .progress{ background:#999; width:0%; height:5px; }
+    #log-19 li p{ margin:0; line-height:18px; }
+    #log-19 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-19 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratPernyataanTidakSengketa p{ margin:10px 5px; font-size:0.9em; }
+    #log-20{ margin:0; padding:0; width:500px;}
+    #log-20 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-20 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-20 li .progress{ background:#999; width:0%; height:5px; }
+    #log-20 li p{ margin:0; line-height:18px; }
+    #log-20 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-20 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratPernyataanPengosonganLahan p{ margin:10px 5px; font-size:0.9em; }
+    #log-21{ margin:0; padding:0; width:500px;}
+    #log-21 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-21 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-21 li .progress{ background:#999; width:0%; height:5px; }
+    #log-21 li p{ margin:0; line-height:18px; }
+    #log-21 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-21 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#PetaBidang p{ margin:10px 5px; font-size:0.9em; }
+    #log-22{ margin:0; padding:0; width:500px;}
+    #log-22 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-22 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-22 li .progress{ background:#999; width:0%; height:5px; }
+    #log-22 li p{ margin:0; line-height:18px; }
+    #log-22 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-22 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }  
+
+#SuratPernyataanJualBeliTanah p{ margin:10px 5px; font-size:0.9em; }
+    #log-23{ margin:0; padding:0; width:500px;}
+    #log-23 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-23 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-23 li .progress{ background:#999; width:0%; height:5px; }
+    #log-23 li p{ margin:0; line-height:18px; }
+    #log-23 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-23 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#BeritaAcaraPemeriksaanLapangan p{ margin:10px 5px; font-size:0.9em; }
+    #log-24{ margin:0; padding:0; width:500px;}
+    #log-24 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-24 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-24 li .progress{ background:#999; width:0%; height:5px; }
+    #log-24 li p{ margin:0; line-height:18px; }
+    #log-24 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-24 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+
+#BAPenetapanHargaGantiRugi p{ margin:10px 5px; font-size:0.9em; }
+    #log-25{ margin:0; padding:0; width:500px;}
+    #log-25 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-25 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-25 li .progress{ background:#999; width:0%; height:5px; }
+    #log-25 li p{ margin:0; line-height:18px; }
+    #log-25 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-25 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }  
+
+#SPH p{ margin:10px 5px; font-size:0.9em; }
+    #log-26{ margin:0; padding:0; width:500px;}
+    #log-26 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-26 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-26 li .progress{ background:#999; width:0%; height:5px; }
+    #log-26 li p{ margin:0; line-height:18px; }
+    #log-26 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-26 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#SuratPernyataanPersetujuanHarga p{ margin:10px 5px; font-size:0.9em; }
+    #log-27{ margin:0; padding:0; width:500px;}
+    #log-27 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-27 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-27 li .progress{ background:#999; width:0%; height:5px; }
+    #log-27 li p{ margin:0; line-height:18px; }
+    #log-27 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-27 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#Rekening p{ margin:10px 5px; font-size:0.9em; }
+    #log-28{ margin:0; padding:0; width:500px;}
+    #log-28 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-28 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-28 li .progress{ background:#999; width:0%; height:5px; }
+    #log-28 li p{ margin:0; line-height:18px; }
+    #log-28 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-28 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#UploadNotulen p{ margin:10px 5px; font-size:0.9em; }
+    #log-29{ margin:0; padding:0; width:500px;}
+    #log-29 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-29 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-29 li .progress{ background:#999; width:0%; height:5px; }
+    #log-29 li p{ margin:0; line-height:18px; }
+    #log-29 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-29 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
+
+#DaftarHadir p{ margin:10px 5px; font-size:0.9em; }
+    #log-30{ margin:0; padding:0; width:500px;}
+    #log-30 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-30 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-30 li .progress{ background:#999; width:0%; height:5px; }
+    #log-30 li p{ margin:0; line-height:18px; }
+    #log-30 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-30 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+
+#UploadSK p{ margin:10px 5px; font-size:0.9em; }
+    #log-31{ margin:0; padding:0; width:500px;}
+    #log-31 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-31 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-31 li .progress{ background:#999; width:0%; height:5px; }
+    #log-31 li p{ margin:0; line-height:18px; }
+    #log-31 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-31 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }                                     
+#UploadPeraturan p{ margin:10px 5px; font-size:0.9em; }
+    #log-32{ margin:0; padding:0; width:500px;}
+    #log-32 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-32 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-32 li .progress{ background:#999; width:0%; height:5px; }
+    #log-32 li p{ margin:0; line-height:18px; }
+    #log-32 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-32 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+#SuratPerintah p{ margin:10px 5px; font-size:0.9em; }
+    #log-33{ margin:0; padding:0; width:500px;}
+    #log-33 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-33 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-33 li .progress{ background:#999; width:0%; height:5px; }
+    #log-33 li p{ margin:0; line-height:18px; }
+    #log-33 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-33 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+#UploadPermasalahan p{ margin:10px 5px; font-size:0.9em; }
+    #log-34{ margin:0; padding:0; width:500px;}
+    #log-34 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-34 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-34 li .progress{ background:#999; width:0%; height:5px; }
+    #log-34 li p{ margin:0; line-height:18px; }
+    #log-34 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-34 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; } 
+#UploadAPL p{ margin:10px 5px; font-size:0.9em; }
+    #log-35{ margin:0; padding:0; width:500px;}
+    #log-35 li{ list-style-position:inside; margin:2px; border:1px solid #ccc; padding:10px; font-size:12px; 
+      font-family:Arial, Helvetica, sans-serif; color:#333; background:#fff; position:relative;}
+    #log-35 li .progressbar{ border:1px solid #333; height:5px; background:#fff; }
+    #log-35 li .progress{ background:#999; width:0%; height:5px; }
+    #log-35 li p{ margin:0; line-height:18px; }
+    #log-35 li.success{ border:1px solid #339933; background:#ccf9b9; }
+    #log-35 li span.cancel{ position:absolute; top:5px; right:5px; width:20px; height:20px; 
+      background:url('../../adminlte/js/multiple_upload/swfupload/cancel.png') no-repeat; cursor:pointer; }
