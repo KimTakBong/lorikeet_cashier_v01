@@ -16,6 +16,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('access_right');
+            $table->boolean('is_delete');
             $table->timestamps();
         });
 
@@ -28,7 +29,8 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->string('avatar')->nullable();
             $table->integer('coin');
-            $table->string('is_active'); // 2 / 1 / active
+            $table->enum('is_active', ['active', 'inactive']);
+            $table->boolean('is_delete');
             $table->rememberToken();
             $table->timestamps();
 

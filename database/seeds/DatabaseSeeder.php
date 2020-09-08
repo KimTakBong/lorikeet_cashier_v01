@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call( 'AccountSeeder' );
+        $this->call( 'CostModuleSeeder' );
+        $this->call( 'ItemModuleSeeder' );
 
         Model::reguard();
     }

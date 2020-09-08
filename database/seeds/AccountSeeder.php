@@ -19,42 +19,47 @@ class AccountSeeder extends Seeder {
     {
         // Add Static Data Usergroup
         DB::table( 'usergroups' )->delete();
+        $access_right = [];
+        $access_right['superadmin'] = [
+          'dashboard'   => [ 'r' => true ],
+          'report'      => [ 'r' => true ],
+          'group'       => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'user'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'cost'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'transaction' => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'item'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ]
+        ];
+        $access_right['owner'] = [
+          'dashboard'   => [ 'r' => true ],
+          'report'      => [ 'r' => true ],
+          'group'       => [ 'c' => false, 'r' => false, 'u' => false, 'd' => false ],
+          'user'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'cost'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'transaction' => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'item'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ]
+        ];
+        $access_right['cashier'] = [
+          'dashboard'   => [ 'r' => false ],
+          'report'      => [ 'r' => false ],
+          'group'       => [ 'c' => false, 'r' => false, 'u' => false, 'd' => false ],
+          'user'        => [ 'c' => false, 'r' => false, 'u' => false, 'd' => false ],
+          'cost'        => [ 'c' => true, 'r' => true, 'u' => false, 'd' => false ],
+          'transaction' => [ 'c' => true, 'r' => true, 'u' => true, 'd' => true ],
+          'item'        => [ 'c' => true, 'r' => true, 'u' => true, 'd' => false ]
+        ];
 
-        $access_right = array();
-
-        $access_right['administrator'] = array(
-          'group'     => array(
-            'c' => true,
-            'r' => true,
-            'u' => true,
-            'd' => true
-          ),
-          'user'      => array(
-            'c' => true,
-            'r' => true,
-            'u' => true,
-            'd' => true
-          ),
-          'station'      => array(
-            'c' => true,
-            'r' => true,
-            'u' => true,
-            'd' => true
-          )
-        );
-        Usergroup::create( array( 
-          'name' => 'Administrator', 
-          'access_right' => json_encode( $access_right['administrator'] ) 
-        ));
+        Usergroup::create( [ 'name' => 'Administrator',   'access_right'  => json_encode( $access_right['superadmin'] ) ]);
+        Usergroup::create( [ 'name' => 'Business Owner',  'access_right'  => json_encode( $access_right['owner'] ) ]);
+        Usergroup::create( [ 'name' => 'Cashier',         'access_right'  => json_encode( $access_right['cashier'] ) ]);
 
         // Add default Admin username
         DB::table( 'users' )->delete();
 
         User::create( array(
           'group_id'     => 1,
-          'email'        => 'alfan.freeze@gmail.com',
-          'password'     => Hash::make( 'kentutbau12' ),
-          'name'         => 'Alfan Rlyan',
+          'email'        => 'admin@bash.com',
+          'password'     => Hash::make( '123' ),
+          'name'         => 'Super Admin',
           'avatar'       => Null,
           'coin'         => 0,
           'is_active'    => 'active',
@@ -63,10 +68,22 @@ class AccountSeeder extends Seeder {
         ));
 
         User::create( array(
-          'group_id'     => 1,
-          'email'        => 'admin@bash.com',
-          'password'     => Hash::make( 'admin123rty' ),
-          'name'         => 'Administrator',
+          'group_id'     => 2,
+          'email'        => 'owner@bash.com',
+          'password'     => Hash::make( '123' ),
+          'name'         => 'Pemilik Bisnis',
+          'avatar'       => Null,
+          'coin'         => 0,
+          'is_active'    => 'active',
+          'created_at'   => new DateTime,
+          'updated_at'   => new DateTime
+        ));
+
+        User::create( array(
+          'group_id'     => 3,
+          'email'        => 'cashier@bash.com',
+          'password'     => Hash::make( '123' ),
+          'name'         => 'Cashier 1',
           'avatar'       => Null,
           'coin'         => 0,
           'is_active'    => 'active',

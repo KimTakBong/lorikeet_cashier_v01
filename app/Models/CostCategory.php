@@ -1,22 +1,21 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model{
-
-
-	/**
+class CostCategory extends Model
+{
+    /**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'service';
+	protected $table = 'cost_category';
 
 	protected $fillable = [
+		'parent_id',
 		'name',
-		'price',
-		'visible'
 	];
 
 	public $timestamps = true;
