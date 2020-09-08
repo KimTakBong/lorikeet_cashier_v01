@@ -1,3 +1,6 @@
+<?php 
+  $role   = json_decode(\Auth::user()->usergroup->access_right);
+?>
 @extends( 'admin.layout.layout' )
 @section('link')
 <link rel="stylesheet" href="{{asset( 'bootstrap-select-1.12.4/dist/css/bootstrap-select.css' )}}">
@@ -23,8 +26,12 @@
 				<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
 	        <div class="row">
 	          <div class="col-md-6">
+        		@if( $role->item->c == true )
 	            <a class="btn btn-primary btn-md" data-toggle="modal" data-target="#createModal">Tambah Data Baru</a>
+				@endif        				
+        		@if( $role->item->u == true )
 	            <a class="btn btn-success btn-md" data-toggle="modal" data-target="#restockModal">Restock Item</a>
+				@endif        				
 	            @if( !empty( $bin->toArray() ) )
 	            <a class="btn btn-warning btn-md" data-toggle="modal" data-target="#recycleModal">Recycle Bin</a>
 	            @endif
@@ -61,8 +68,13 @@
 	                  	@if( !empty($data->history->toArray()) )
 	                  	<button title="History Perubahan Stock" data-toggle="modal" data-target="#historyModal{{$i}}" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></button>
 	                  	@endif
+    
+        				@if( $role->item->u == true )
 	                  	<button title="Perbaharui Data" data-toggle="modal" data-target="#updateModal{{$i}}" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button>
+        				@endif
+        				@if( $role->item->d == true )
 	                  	<button title="Hapus Data" data-toggle="modal" data-target="#deleteModal{{$i}}" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+        				@endif
 	                  </td>
 	                </tr>
 	              <?php $i++; ?>
@@ -187,7 +199,7 @@
 			        	<span class="label label-warning">{{ $his->quantity }}</span>
 			        	@endif
 			        </td>
-			        @if( \Auth::user()->group_id == 1 )
+        			@if( $role->item->d == true )
 			        	<td><a href="{{ route( 'history.delete', \Crypt::encrypt( $his->id ) ) }}" class="btn btn-xs btn-danger">Hapus</a></td>
 			        @endif
 			      </tr>
@@ -196,7 +208,9 @@
 			  </div>
       </div>
       <div class="modal-footer">
+        @if( $role->item->d == true )
       	<a href="{{ route( 'history.clear', \Crypt::encrypt( $data->id ) ) }}" class="btn btn-danger btn-md">Clear History </a>
+		@endif
       </div>
     </div>
   </div>

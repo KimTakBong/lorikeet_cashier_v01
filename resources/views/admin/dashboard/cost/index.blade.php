@@ -1,3 +1,6 @@
+<?php 
+  $role   = json_decode(\Auth::user()->usergroup->access_right);
+?>
 @extends( 'admin.layout.layout' )
 @section('link')
 <link rel="stylesheet" href="{{asset( 'bootstrap-select-1.12.4/dist/css/bootstrap-select.css' )}}">
@@ -20,7 +23,9 @@
 				<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
 	        <div class="row">
 	          <div class="col-md-6">
+        		@if( $role->cost->c == true )
 	            <a class="btn btn-primary btn-md" data-toggle="modal" data-target="#createModal">Tambah Data Baru</a>
+	          	@endif
 	          </div>
 	        </div>
 	        <br><br>
@@ -49,7 +54,9 @@
 	                  <td class="sorting_1">{{ $data->name }}</td>
 	                  <td>
 	                  	<button title="Detail Data" data-toggle="modal" data-target="#detailModal{{$i}}" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></button>
+        				@if( $role->cost->d == true )
 	                  	<button title="Hapus Data" data-toggle="modal" data-target="#deleteModal{{$i}}" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+        				@endif
 	                  </td>
 	                </tr>
 	              <?php $i++; ?>
@@ -63,98 +70,99 @@
 	  </div>
 	</section>
 
-<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <form enctype="multipart/form-data" action="{{ route( 'cost.create' ) }}" method="post">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create New Cost Data </h4>
-      </div>
-      <div id="modal" class="modal-body">
-        <div class="box-body">
-          <div class="form-group">
-            <label>Name</label>
-            <input name="name" class="form-control" required="required">
-          </div>
-          <div class="form-group">
-            <label>Cost ( Nominal )</label>
-            <div class="input-group">
-              <span class="input-group-addon">Rp.</span>
-              <input type="number" class="form-control" name="nominal" required="required">
-              <span class="input-group-addon">.00</span>
-            </div>
-          </div>
-          <label>Date</label>
-          <div class="input-group date" data-provide="datepicker">
-	          <div class="input-group-addon">
-	        		<input readonly="" value="{{ date('m/d/Y') }}" name="date" type="text" id="dpd1" class="form-control">
-	          </div>
-	        </div>
-          <div class="form-group">
-            <label>Description</label>
-            <textarea class="form-control" name="description"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <input type="hidden" name="_token" value="{{csrf_token()}}">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save</button>
-      </div>
-    </div>
-  </div>
-  </form>
-</div>
-
-<?php $i=0; ?>
-@foreach($cost as $data)
-<div class="modal fade" id="detailModal{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Detail Cost <code>{{ $data->name }}</code></h4>
-      </div>
-      <div class="modal-body">
-      	<table class="table table-bordered">
-          <tbody><tr>
-            <th>Date</th>
-            <th>Nominal</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>{{ $data->date }}</td>
-            <td>Rp. {{ number_format($data->nominal) }}</td>
-            <td>{{ $data->description }}</td>
-          </tr>
-        </tbody></table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="deleteModal{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <form enctype="multipart/form-data" action="{{ route( 'cost.delete', \Crypt::encrypt( $data->id ) ) }}" method="post">
+	<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <form enctype="multipart/form-data" action="{{ route( 'cost.create' ) }}" method="post">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Apa Anda Yakin Ingin Menghapus Data Cost {{ $data->name }}</h4>
+	        <h4 class="modal-title">Create New Cost Data </h4>
+	      </div>
+	      <div id="modal" class="modal-body">
+	        <div class="box-body">
+	          <div class="form-group">
+	            <label>Name</label>
+	            <input name="name" class="form-control" required="required">
+	          </div>
+	          <div class="form-group">
+	            <label>Cost ( Nominal )</label>
+	            <div class="input-group">
+	              <span class="input-group-addon">Rp.</span>
+	              <input type="number" class="form-control" name="nominal" required="required">
+	              <span class="input-group-addon">.00</span>
+	            </div>
+	          </div>
+	          <label>Date</label>
+	          <div class="input-group date" data-provide="datepicker">
+		          <div class="input-group-addon">
+		        		<input readonly="" value="{{ date('m/d/Y') }}" name="date" type="text" id="dpd1" class="form-control">
+		          </div>
+		        </div>
+	          <div class="form-group">
+	            <label>Description</label>
+	            <textarea class="form-control" name="description"></textarea>
+	          </div>
+	        </div>
 	      </div>
 	      <div class="modal-footer">
 	        <input type="hidden" name="_token" value="{{csrf_token()}}">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="submit" class="btn btn-danger">Ya, Hapus !</button>
+	        <button type="submit" class="btn btn-primary">Save</button>
 	      </div>
 	    </div>
 	  </div>
-  </form>
-</div>
-<?php $i++; ?>
-@endforeach
+	  </form>
+	</div>
+
+	<?php $i=0; ?>
+	@foreach($cost as $data)
+	<div class="modal fade" id="detailModal{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Detail Cost <code>{{ $data->name }}</code></h4>
+	      </div>
+	      <div class="modal-body">
+	      	<table class="table table-bordered">
+	          <tbody><tr>
+	            <th>Date</th>
+	            <th>Nominal</th>
+	            <th>Description</th>
+	          </tr>
+	          <tr>
+	            <td>{{ $data->date }}</td>
+	            <td>Rp. {{ number_format($data->nominal) }}</td>
+	            <td>{{ $data->description }}</td>
+	          </tr>
+	        </tbody></table>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="deleteModal{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <form enctype="multipart/form-data" action="{{ route( 'cost.delete', \Crypt::encrypt( $data->id ) ) }}" method="post">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Apa Anda Yakin Ingin Menghapus Data Cost {{ $data->name }}</h4>
+		      </div>
+		      <div class="modal-footer">
+		        <input type="hidden" name="_token" value="{{csrf_token()}}">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="submit" class="btn btn-danger">Ya, Hapus !</button>
+		      </div>
+		    </div>
+		  </div>
+	  </form>
+	</div>
+	<?php $i++; ?>
+	@endforeach
+@endsection
 
 
 @section('script')
@@ -226,5 +234,4 @@
     });
   });
 </script>
-@endsection
 @endsection

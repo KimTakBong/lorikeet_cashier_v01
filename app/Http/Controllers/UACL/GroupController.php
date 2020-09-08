@@ -16,12 +16,6 @@ class GroupController extends Controller
 
 	public function access( $input ){
 		$access = array(
-	        'station'   => array(
-	        	'c' => ( isset($input['station-c']) ) ? true : false,
-	        	'r' => ( isset($input['station-r']) ) ? true : false,
-	        	'u' => ( isset($input['station-u']) ) ? true : false,
-	        	'd' => ( isset($input['station-d']) ) ? true : false
-	        ),
 	        'group' => array(
 	        	'c' => ( isset($input['group-c']) ) ? true : false,
 	        	'r' => ( isset($input['group-r']) ) ? true : false,
@@ -33,7 +27,31 @@ class GroupController extends Controller
 	            'r' => ( isset($input['user-r']) ) ? true : false,
 	            'u' => ( isset($input['user-u']) ) ? true : false,
 	            'd' => ( isset($input['user-d']) ) ? true : false
-	      	)
+	      	),
+	      	'dashboard'  => array(
+	            'r' => ( isset($input['dashboard-r']) ) ? true : false,
+	      	),
+	      	'report'  => array(
+	            'r' => ( isset($input['report-r']) ) ? true : false,
+	      	),
+	      	'cost'  => array(
+	            'c' => ( isset($input['cost-c']) ) ? true : false,
+	            'r' => ( isset($input['cost-r']) ) ? true : false,
+	            'u' => ( isset($input['cost-u']) ) ? true : false,
+	            'd' => ( isset($input['cost-d']) ) ? true : false
+	      	),
+	      	'transaction'  => array(
+	            'c' => ( isset($input['transaction-c']) ) ? true : false,
+	            'r' => ( isset($input['transaction-r']) ) ? true : false,
+	            'u' => ( isset($input['transaction-u']) ) ? true : false,
+	            'd' => ( isset($input['transaction-d']) ) ? true : false
+	      	),
+	      	'item'  => array(
+	            'c' => ( isset($input['item-c']) ) ? true : false,
+	            'r' => ( isset($input['item-r']) ) ? true : false,
+	            'u' => ( isset($input['item-u']) ) ? true : false,
+	            'd' => ( isset($input['item-d']) ) ? true : false
+	      	),
 	    );
 
 		return json_encode( $access );
@@ -75,7 +93,6 @@ class GroupController extends Controller
 
 	public function postCreate(){
 		$input = Input::all();
-
 		$rules = [
 			'name'	=> 'required',
 		];

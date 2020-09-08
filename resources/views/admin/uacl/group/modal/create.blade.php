@@ -1,5 +1,5 @@
 <form enctype="multipart/form-data" action="{{route('uacl.group.create.post')}}" method="post">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -13,12 +13,69 @@
           </div>
           <div class="form-group">
             <label>Hak Akses</label><br>
+              <!-- Dashboard & Report -->
               <table class="table table-bordered table-striped dataTable" role="grid">
-                  <th>Module Name</th>
-                  <th>Create</th>
-                  <th>Read</th>
-                  <th>Update</th>
-                  <th>Delete</th>
+                <th>Dashboard & Report</th>
+                <th>Read</th>
+                <tr>
+                  <td>Dashboard</td>
+                  <td><input name="dashboard-r" type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Laporan</td>
+                  <td><input name="report-r" type="checkbox"></td>
+                </tr>
+              </table>
+              <hr>
+              <!-- END Dashboard & Report -->
+              <!-- Transaction & Product Management -->
+              <table class="table table-bordered table-striped dataTable" role="grid">
+                <th>Selling</th>
+                <th>Create</th>
+                <th>Read</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <tr>
+                  <td>Transaction</td>
+                  <td><input name="transaction-c" type="checkbox"></td>
+                  <td><input name="transaction-r" type="checkbox"></td>
+                  <td><input name="transaction-u" type="checkbox"></td>
+                  <td><input name="transaction-d" type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Product Management</td>
+                  <td><input name="item-c" type="checkbox"></td>
+                  <td><input name="item-r" type="checkbox"></td>
+                  <td><input name="item-u" type="checkbox"></td>
+                  <td><input name="item-d" type="checkbox"></td>
+                </tr>
+              </table>
+              <hr>
+              <!-- END Transaction & Product Management -->
+              <!-- Cost -->
+              <table class="table table-bordered table-striped dataTable" role="grid">
+                <th>Pengeluaran</th>
+                <th>Create</th>
+                <th>Read</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <tr>
+                  <td>Pengeluaran</td>
+                  <td><input name="cost-c" type="checkbox"></td>
+                  <td><input name="cost-r" type="checkbox"></td>
+                  <td><input name="cost-u" type="checkbox"></td>
+                  <td><input name="cost-d" type="checkbox"></td>
+                </tr>
+              </table>
+              <hr>
+              <!-- END Cost -->
+              <!-- UACL -->
+              <table class="table table-bordered table-striped dataTable" role="grid">
+                <th>UACL</th>
+                <th>Create</th>
+                <th>Read</th>
+                <th>Update</th>
+                <th>Delete</th>
                 <tr>
                   <td>Group</td>
                   <td><input name="group-c" type="checkbox"></td>
@@ -33,14 +90,8 @@
                   <td><input name="user-u" type="checkbox"></td>
                   <td><input name="user-d" type="checkbox"></td>
                 </tr>
-                <tr>
-                  <td>Station Management</td>
-                  <td><input name="station-c" type="checkbox"></td>
-                  <td><input name="station-r" type="checkbox"></td>
-                  <td><input name="station-u" type="checkbox"></td>
-                  <td><input name="station-d" type="checkbox"></td>
-                </tr>
               </table>
+              <!-- End UACL -->
           </div>
         </div>
       </div>
