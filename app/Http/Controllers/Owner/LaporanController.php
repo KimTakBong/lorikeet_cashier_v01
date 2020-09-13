@@ -9,8 +9,6 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Item;
 use App\Models\ItemTransaction;
-use App\Models\Service;
-use App\Models\ServiceTransaction;
 use App\Models\Cost;
 use App\Models\User;
 
@@ -27,7 +25,6 @@ class LaporanController extends Controller
         $data['title']      = "Lorikeet || Laporan Index";
         $data['user']       = Auth::user();
         $data['item']       = Item::all();
-        $data['service']    = Service::all();
         if ( $send_date ) {
             $req_d = explode('-', $send_date);
             $total_days  = cal_days_in_month(CAL_GREGORIAN, $req_d[0], $req_d[1])+1;
@@ -49,13 +46,6 @@ class LaporanController extends Controller
             }
             $i++;
         }
-        foreach ($data['service'] as $service) {
-            $service_transaction[$i] = ServiceTransaction::where( 'service_id', $service->id )->get()->toArray();
-            if (!empty($service_transaction[$i])) {
-                array_push($data['service_transaction'], $service_transaction[$i]);
-            }
-            $i++;
-        }
 
         $data['request_date'] = ($send_date == true )?$send_date:date("m-Y");
 
@@ -66,16 +56,6 @@ class LaporanController extends Controller
                 if ( $data['request_date'] == $date[1].'-'.$date[0] ) {
                     array_push($data['income'][(int)$date[2]], $data['item_transaction'][$it][$itd]['total_price']);
                     array_push($data['table'], $data['item_transaction'][$it][$itd]);
-                }
-            }
-        }
-
-        for ($it=0; $it < count($data['service_transaction']); $it++) { 
-            for ($itd=0; $itd < count($data['service_transaction'][$it]); $itd++) { 
-                $date = explode('-', explode(' ', $data['service_transaction'][$it][$itd]['created_at'])[0]);
-                if ( $data['request_date'] == $date[1].'-'.$date[0] ) {
-                    array_push($data['income'][(int)$date[2]], $data['service_transaction'][$it][$itd]['total_price']);
-                    array_push($data['table'], $data['service_transaction'][$it][$itd]);
                 }
             }
         }
@@ -153,16 +133,9 @@ class LaporanController extends Controller
                                     ->whereBetween( 'item_transaction.created_at', [ $date[2].'-'.$date[1].'-'.$date[0].' 00:00:00', $date[2].'-'.$date[1].'-'.$date[0].' 23:59:59' ]  )
                                     ->select('item.name', 'item_transaction.quantity', 'item_transaction.total_price')
                                     ->get()->toArray();
-            $data['service']  = ServiceTransaction::join('service', 'service_transaction.service_id', '=', 'service.id')
-                                    ->whereBetween( 'service_transaction.created_at', [ $date[2].'-'.$date[1].'-'.$date[0].' 00:00:00', $date[2].'-'.$date[1].'-'.$date[0].' 23:59:59' ]  )
-                                    ->select('service.name', 'service_transaction.quantity', 'service_transaction.total_price')
-                                    ->get()->toArray();
 
             for ($i=0; $i < count($data['item']); $i++) {
                 array_push($income, $data['item'][$i]);
-            }
-            for ($i=0; $i < count($data['service']); $i++) {
-                array_push($income, $data['service'][$i]);
             }
 
             $data['income'] = array();

@@ -6,15 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use App\Models\Station;
-use App\Models\StationDomicile;
-use App\Models\StationCategory;
 use App\Models\Cost;
-use App\Models\Field;
-use App\Models\Item;
-use App\Models\ItemRestock;
-use App\Models\ItemTransaction;
 
 use Auth, Redirect, Input, Validator, Crypt;
 
@@ -25,7 +17,7 @@ class CostController extends Controller
     }
 
     public function getIndex(){
-        $data['title']      = "Lorikeet || Cafe & Other Index";
+        $data['title']      = "Lorikeet || Cost Management";
         $data['user']       = Auth::user();
         $data['cost']		= Cost::all();
         // dd($data);

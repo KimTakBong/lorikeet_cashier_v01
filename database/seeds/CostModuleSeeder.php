@@ -30,7 +30,7 @@ class CostModuleSeeder extends Seeder
         	'name' 				=> "Bayar Listrik Minggu Pertama",
         	'description' 		=> "Coba untuk masukan saldo listrik 500k",
         	'nominal' 			=> 500000,
-        	'date' 				=> new DateTime
+        	'date' 				=> "01/02/2020"
         ]);
         
     }

@@ -10,7 +10,6 @@ use App\Models\User;
 use App\Models\Item;
 use App\Models\Service;
 use App\Models\ItemTransaction;
-use App\Models\ServiceTransaction;
 use App\Models\Cost;
 use Carbon\Carbon;
 
@@ -40,11 +39,6 @@ class DashboardController extends Controller
         foreach ($transaction['item'] as $trans_item) {
             $data['today_item_sold']    += $trans_item['quantity'];
             $data['today_revenue']      += $trans_item['total_price'];
-        }
-        $transaction['service'] = ServiceTransaction::where( 'created_at', '>=', $today.' 00:00:00' )->get()->toArray();
-        foreach ($transaction['service'] as $trans_service) {
-            $data['today_service_sold'] += $trans_service['quantity'];
-            $data['today_revenue']      += $trans_service['total_price'];
         }
         $data['cost'] = Cost::where( 'created_at', '>=', $today.' 00:00:00' )->get()->toArray();
         foreach ($data['cost'] as $cost_today) {
